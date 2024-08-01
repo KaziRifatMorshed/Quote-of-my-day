@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Exec=~/Applications/Quote-of-my-day
+Icon=/usr/share/icons/Arc-Circle/actions/24/format-indent-more.png
+Terminal=false
+Categories=Utility;
+
+Name=Quote-of-my-day
+Comment=Personal daily quote viewer desktop gui and cli app
