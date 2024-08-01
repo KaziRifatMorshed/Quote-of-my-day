@@ -54,17 +54,18 @@ char *get_quote(uint32_t n) {
 static void render_top_bar() {
   lf_push_font(&my_font_head), lf_text("Quote of my day..."), lf_pop_font();
   // exit button
-  //   const float width = 160.0f;
-  //
-  //   LfUIElementProps props = lf_get_theme().button_props;
-  //   lf_set_ptr_x_absolute(win_w - width - WIN_MARGIN * 2.0f);
-  //   props.margin_left = 0.0f, props.margin_right = 0.0f, props.margin_top =
-  //   0.0f; props.color = (LfColor){65, 167, 204, 255}; props.border_width =
-  //   0.0f, props.corner_radius = 8.0f; lf_push_style_props(props);
-  //   lf_set_line_should_overflow(false);
-  //   lf_button_fixed(":q!", width, -1); // how minus 1 ?
-  //   lf_set_line_should_overflow(true);      // to avoid overriding
-  //   lf_pop_style_props();
+  const float width = 160.0f;
+
+  LfUIElementProps props = lf_get_theme().button_props;
+  lf_set_ptr_x_absolute(win_w - width - WIN_MARGIN * 2.0f);
+  props.margin_left = 0.0f, props.margin_right = 0.0f, props.margin_top = 0.0f;
+  props.color = (LfColor){65, 167, 204, 255};
+  props.border_width = 0.0f, props.corner_radius = 4.0f;
+  lf_push_style_props(props);
+  lf_set_line_should_overflow(false);
+  lf_button_fixed(":q!", width, -1); // how minus 1 ?
+  lf_set_line_should_overflow(true); // to avoid overriding
+  lf_pop_style_props();
 }
 
 static void render_Quote(uint32_t n) { // GUI
