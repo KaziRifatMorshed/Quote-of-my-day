@@ -143,7 +143,7 @@ static void load_all_quotes() {
       "absolutely.\nGreat "
       "men are almost always bad men, even \nwhen they exercise influence and "
       "not authority;\nstill more when you superadd the tendency of the \n"
-      "certainty of corruption by authority.\" \n\t- Lord Anton ");
+      "certainty of corruption by authority.\" \n     - Lord Anton ");
   strcpy(q[2],
          " \"The difference between the novice and the master is \nthat the "
          "master has failed more times than the novice has tried.\" \n"
