@@ -6,6 +6,8 @@
 # Platform: GNU/Linux (tested on arch base distro)
 # Program Description: This is a GUI desktop app for personal use which will
 remind me a quote every day from its internally set 31 quotes.
+# Acknowledgement: I an thankful to this repo https://github.com/cococry/todo
+which was the learning material for this mini project
 
 # LIBRARY INSTALLATION (for arch linux):
     ```
@@ -15,7 +17,7 @@ remind me a quote every day from its internally set 31 quotes.
     ```
 
 # COMPILATION COMMAND WITH PARAMETERS:
-    `clang Quote_of_my_day.c -o Quote_of_my_day -lglfw -lGL -lleif -lclipboard
+    `clang Quote_of_my_day.c -o Quote_of_my_day -lglfw -lGL -lleif -lclipboard \
 -lm && ./Quote_of_my_day`
 
 */
@@ -63,7 +65,9 @@ static void render_top_bar() {
   props.border_width = 0.0f, props.corner_radius = 4.0f;
   lf_push_style_props(props);
   lf_set_line_should_overflow(false);
-  lf_button_fixed(":q!", width, -1); // how minus 1 ?
+  if (lf_button_fixed(":q!", width, -1) == LF_CLICKED) {
+    exit(0);
+  }
   lf_set_line_should_overflow(true); // to avoid overriding
   lf_pop_style_props();
 }
